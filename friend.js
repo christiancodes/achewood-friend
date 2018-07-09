@@ -18,3 +18,17 @@ window.addEventListener("keydown", function(e) {
 
 // scroll to comic
 document.getElementById("body").scrollIntoView();
+
+// calculate progress
+if(window.location.href.indexOf("date=") !== -1) {
+  var theDate = window.location.href.split("date=")[1];
+  var sequenceNum = dates.indexOf( theDate );
+  if( sequenceNum !== -1) {
+    var percentage = (((sequenceNum+1.0) / dates.length) * 100 ).toFixed(1);
+    var progressText = (sequenceNum+1) + " of " + dates.length + " (" + percentage + "%)";
+    var t = document.createElement('p');
+    t.innerText = progressText;
+    t.style.fontSize = "0.75em";
+    document.getElementById('comic_body').appendChild(t);
+  }
+}
