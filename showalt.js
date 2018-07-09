@@ -3,7 +3,7 @@ var p = document.createElement('p');
 p.innerText = document.getElementsByClassName('comic')[0].title;
 document.getElementById('comic_body').appendChild(p);
 
-// Arrow key scroller
+// Arrow key navigation
 let url = window.location.origin;
 window.addEventListener("keydown", function(e) {
   if (e.key === "ArrowLeft" || e.key.match(/^j$/i)) {
@@ -14,3 +14,6 @@ window.addEventListener("keydown", function(e) {
     window.location = `${url}/${nextComic}`;
   }
 });
+
+// scroll to comic
+document.getElementById("body").scrollIntoView();
