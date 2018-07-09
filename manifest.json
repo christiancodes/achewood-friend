@@ -15,7 +15,15 @@
       "run_at": "document_idle"
     }
   ],
+  "background": {
+    "persistent": false,
+    "scripts": ["background.js"]
+  },
   "permissions": [
+    "webNavigation",
+    "storage",
+    "background",
+    "tabs",
     "activeTab",
     "http://*.achewood.com/"
   ]
