@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
-  "name": "Achewood Alt-text Revealer",
-  "description": "Prints the comic's alt text underneath.",
+  "name": "AchewoodFriend",
+  "description": "Creates a better Achewood reading experience.",
   "author": "Christian DeWolf",
   "version": "1.0",
   "browser_action": {
@@ -11,7 +11,7 @@
   "content_scripts": [
     {
       "matches": ["http://*.achewood.com/*"],
-      "js": ["showalt.js"],
+      "js": ["friend.js"],
       "run_at": "document_idle"
     }
   ],
