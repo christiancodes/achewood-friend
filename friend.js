@@ -1,6 +1,7 @@
 // Show alt text
 var p = document.createElement('p');
-p.innerText = document.getElementsByClassName('comic')[0].title;
+var altText = document.getElementsByClassName('comic')[0].title;
+p.innerText = altText || "--No alt text--";
 document.getElementById('comic_body').appendChild(p);
 
 // Arrow key navigation
