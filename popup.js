@@ -1,6 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
-  var openBookmarkButton = document.getElementById('goToBookmark');
-  openBookmarkButton.addEventListener('click', function() {
-    chrome.runtime.sendMessage({bookmark: "visit"});
+  // visit last bookmark
+  document.getElementById('goToBookmark').addEventListener('click', function() {
+    chrome.runtime.sendMessage({intent: "bookmark"});
   }, false);
+
+  // view source code
+  document.getElementById('sourceLink').addEventListener('click', function() {
+    chrome.runtime.sendMessage({intent: "source"});
+  }, false);
+
 }, false);

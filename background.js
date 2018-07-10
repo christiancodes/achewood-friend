@@ -7,13 +7,17 @@ chrome.webNavigation['onCompleted'].addListener(function(data) {
 });
 
 chrome.runtime.onMessage.addListener( function(request,sender,sendResponse) {
-  if( request.bookmark === "visit" ) {
+  if( request.intent === "bookmark" ) {
     ab.getURL((data) => {
       if (data.url) {
         chrome.tabs.update(null, {
           url: data.url
         });
       }
+    });
+  } else if( request.intent === "source" ) {
+    chrome.tabs.update(null, {
+      url: 'https://github.com/christiancodes/achewood-friend'
     });
   }
 });
