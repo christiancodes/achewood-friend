@@ -4,10 +4,10 @@ var altText = document.getElementsByClassName('comic')[0].title;
 p.innerText = altText || "--No alt text--";
 document.getElementById('comic_body').appendChild(p);
 
-// Arrow key navigation
+// Arrow key navigation. Shift also moves forward
 let url = window.location.origin;
 window.addEventListener("keydown", function(e) {
-  if (e.key === "ArrowLeft" || e.key.match(/^j$/i)) {
+  if (e.key === "ArrowLeft" || e.key.match(/^j$/i) || e.key === "Shift") {
     const previousComic = document.querySelector(".left a").getAttribute("href");
     window.location = `${url}/${previousComic}`;
   } else if (e.key === "ArrowRight" || e.key.match(/^k$/i)) {
