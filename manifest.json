@@ -5,9 +5,12 @@
   "author": "Christian DeWolf",
   "version": "1.0",
   "browser_action": {
-   "default_icon": "aviators.png",
+   "default_icon": "aviators-48.png",
    "default_popup": "popup.html"
   },
+  "icons": { "16": "aviators-16.png",
+             "48": "aviators-48.png",
+             "128": "aviators-128.png" },
   "content_scripts": [
     {
       "matches": ["http://*.achewood.com/*"],
