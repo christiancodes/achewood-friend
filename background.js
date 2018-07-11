@@ -23,10 +23,10 @@ chrome.runtime.onMessage.addListener( function(request,sender,sendResponse) {
 });
 
 function ModifiedAchewoodBookmarker() {
-  this.achewoodURL = 'http://www.achewood.com/index.php?date=';
+  this.achewoodURL = 'achewood.com/index.php?date=';
 
   this.isAchewoodURL = function(url) {
-    return url.substring(0, this.achewoodURL.length) === this.achewoodURL
+    return url.indexOf(this.achewoodURL) !== -1;
   };
 
   this.getURL = function(cb) {
