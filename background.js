@@ -13,6 +13,10 @@ chrome.runtime.onMessage.addListener( function(request,sender,sendResponse) {
         chrome.tabs.update(null, {
           url: data.url
         });
+      } else {  // no bookmark yet? go to first comic
+        chrome.tabs.update(null, {
+          url: "http://achewood.com/index.php?date=10012001"
+        });
       }
     });
   } else if( request.intent === "source" ) {
