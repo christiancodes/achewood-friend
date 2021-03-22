@@ -9,4 +9,12 @@ A Chrome Extension for your next [Achewood](http://www.achewood.com) read-throug
 - Shift key conveniently moves to next page
 - Bookmarks your spot, adapted from [Achewood Bookmark](https://github.com/andrei-m/achewood-bookmark)
 
-Not affiliated with Achewood or Chris Onstad. Pull requests welcome.
+Not affiliated with Achewood or Chris Onstad.
+
+## Installation
+
+Open your [Chrome Extensions](chrome://extensions/) panel and turn on Developer Mode. Click "Load Unpacked" and select the achewood-friend folder.
+
+## Contributions
+
+Pull requests welcome!
